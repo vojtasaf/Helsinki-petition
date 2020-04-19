@@ -3,9 +3,25 @@
 -->
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Helsinki</title>
+    <style>
+      header {
+        background-color: black;
+        color: beige;
+      }
+      body {
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 989px;
+        margin: 0 auto;
+      }
+      /* margins go clockwise */
+    </style>
+  </head>
   <body>
-    <div>
+    <div class="container">
       <header>
         <nav>
           <a href="index.html">Home</a>
@@ -27,7 +43,7 @@
         </ul>
       </div>
       <img src="./helsinki.jpg" alt="Picture of Helsinki" width="600" />
-      <div>
+      <div id="below_image">
         <p>
           Capital Region consists of these cities
           <i>(ordered by population)</i>:
@@ -41,6 +57,7 @@
     </div>
     <hr />
     <footer>Vojta Šafránek &copy; 2020</footer>
+    <!-- script should be placed at the bottom of the page -->
     <script src="app.js"></script>
   </body>
 </html>
