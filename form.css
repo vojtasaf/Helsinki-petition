@@ -1,0 +1,53 @@
+p {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+input[type="text"],
+input[type="email"] {
+	border: 2px solid #e7e7e7;
+	background-color: #e7e7e7;
+	color: black;
+	font-family: Lora, Georgia, serif;
+	font-size: 1em;
+	padding: 5px 25px;
+	margin-top: 15px;
+	width: 200px;
+	height: 30px;
+	outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+	border: 2px solid #244a4a;
+	background-color: white;
+}
+
+#resident {
+	margin-top: 20px;
+}
+
+#signature {
+	margin-top: 15px;
+}
+
+#sign_button {
+	border: none;
+	background-color: #dcbb7e;
+	font-family: Staatliches, Helvetica, sans-serif;
+	font-size: 1.5em;
+	font-weight: 200;
+	color: black;
+	padding: 5px 50px;
+	border-radius: 2.5px;
+	margin: 50px;
+	outline: none;
+}
+
+#sign_button:hover {
+	background-color: #244a4a;
+	color: ivory;
+}

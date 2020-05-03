@@ -1,63 +1,70 @@
 <!--
-    Reference website
+		Reference website
 -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Helsinki</title>
-    <style>
-      header {
-        background-color: black;
-        color: beige;
-      }
-      body {
-        font-family: Roboto, Arial, Helvetica, sans-serif;
-      }
-      .container {
-        width: 989px;
-        margin: 0 auto;
-      }
-      /* margins go clockwise */
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="petition.html">Petition</a>
-        </nav>
-      </header>
-      <div>
-        <h1>Helsinki</h1>
-        <p>
-          Helsinki is the capital and most populous city of <b>Finland</b>.
-          <br />
-          You can visit the city website
-          <a href="https://www.hel.fi/helsinki/en">here</a>.
-        </p>
-        <p>In the image below you can see:</p>
-        <ul>
-          <li>Helsinki Cathedral</li>
-          <li>Kauppatori</li>
-        </ul>
-      </div>
-      <img src="./helsinki.jpg" alt="Picture of Helsinki" width="600" />
-      <div id="below_image">
-        <p>
-          Capital Region consists of these cities
-          <i>(ordered by population)</i>:
-        </p>
-        <ol>
-          <li>Helsinki</li>
-          <li>Espoo</li>
-          <li>Vantaa</li>
-        </ol>
-      </div>
-    </div>
-    <hr />
-    <footer>Vojta Šafránek &copy; 2020</footer>
-    <!-- script should be placed at the bottom of the page -->
-    <script src="app.js"></script>
-  </body>
+<html lang="en">
+	<head>
+		<title>One Helsinki</title>
+		<link rel="stylesheet" href="main.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Staatliches"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lora"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<nav>
+					<a href="index.html">Home</a>
+					<a href="form.html">Petition</a>
+				</nav>
+			</header>
+			<div class="content">
+				<h1>Y <span id="one">1</span> Helsinki</h1>
+				<section id="above_image">
+					<p>
+						Helsinki is the capital and most populous city of <b>Finland</b>.
+						<br />
+						You can visit the city website
+						<a href="https://www.hel.fi/helsinki/en">here</a>.
+					</p>
+				</section>
+				<figure>
+					<img src="./helsinki.jpg" alt="Picture of Helsinki" />
+				</figure>
+				<section id="below_image">
+					<div id="cities" class="child">
+						<p>
+							Capital Region consists of these cities
+							<i>(ordered by population)</i>:
+						</p>
+						<ol>
+							<li>Helsinki</li>
+							<li>Espoo</li>
+							<li>Vantaa</li>
+						</ol>
+					</div>
+
+					<div id="sights" class="child">
+						<p>In the image above you can see:</p>
+						<ul>
+							<li>Helsinki Cathedral</li>
+							<li>Kauppatori</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+
+			<footer>
+				<hr />
+				<span id="copyright">Vojta Šafránek &copy; 2020</span>
+			</footer>
+		</div>
+		<!-- script should be placed at the bottom of the page -->
+		<script src="app.js"></script>
+	</body>
 </html>

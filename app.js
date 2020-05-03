@@ -5,50 +5,50 @@ let totalSignatures = 0;
 console.log("Total signatures: " + totalSignatures);
 
 const Signature = function (name, surname, public_signature, email) {
-  //constructor function
-  this.name = name;
-  this.surname = surname;
-  this.public_signature = true;
-  const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regular expression
-  if (pattern.test(email)) {
-    this.email = email;
-    console.log("The email address is valid.");
-  } else {
-    throw "Invalid email address.";
-  }
-  const dt = new Date(); //current date and time
-  this.date = dt.getDate() + "." + dt.getMonth() + "." + dt.getFullYear();
-  totalSignatures++;
-  console.log("Total signatures: " + totalSignatures);
+	//constructor function
+	this.name = name;
+	this.surname = surname;
+	this.public_signature = true;
+	const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regular expression
+	if (pattern.test(email)) {
+		this.email = email;
+		console.log("The email address is valid.");
+	} else {
+		throw "Invalid email address.";
+	}
+	const dt = new Date(); //current date and time
+	this.date = dt.getDate() + "." + dt.getMonth() + "." + dt.getFullYear();
+	totalSignatures++;
+	console.log("Total signatures: " + totalSignatures);
 };
 
 Signature.prototype.fullName = function () {
-  //function only exists once
-  return this.name + " " + this.surname;
+	//function only exists once
+	return this.name + " " + this.surname;
 };
 
 let sign_button = document.getElementById("sign_button");
 
-let submitHandler = function formSubmitHandler(event) {
-  event.preventDefault(); //prevents default behaviour of the submit button
-  const newSignature = new Signature("John", "Doe", true, "john.doe@email.com");
-  console.log(newSignature.fullName() + " signed this petition.");
-  if (newSignature.public_signature == true) {
-    console.log("The signature will show be shown publicly.");
-  }
+const submitHandler = function formSubmitHandler(event) {
+	event.preventDefault(); //prevents default behaviour of the submit button
+	const newSignature = new Signature("John", "Doe", true, "john.doe@email.com");
+	console.log(newSignature.fullName() + " signed this petition.");
+	if (newSignature.public_signature == true) {
+		console.log("The signature will show be shown publicly.");
+	}
 };
 
 if (sign_button) {
-  sign_button.addEventListener("click", submitHandler);
+	sign_button.addEventListener("click", submitHandler);
 }
 
 if ("10" == 10) {
-  console.log("This shows");
+	console.log("This shows");
 }
 
 if ("10" === 10) {
-  //identity equal: includes type check
-  console.log("This doesn't show");
+	//identity equal: includes type check
+	console.log("This doesn't show");
 }
 
 let number = 5.1 + 3.3;
@@ -69,14 +69,14 @@ c = -c; //flips to positive 3
 console.log(c);
 
 if ("B" < "a") {
-  //we can compare the alphabetical order, lower comes first
-  console.log("B comes before a"); //ASCII - uppercase comes before lowercase
+	//we can compare the alphabetical order, lower comes first
+	console.log("B comes before a"); //ASCII - uppercase comes before lowercase
 }
 
 let array = [3, 2, 1, 10];
 array.sort(function (value1, value2) {
-  //this function is needed because otherwise sort orders by string value (result would be [1, 10, 2, 3])
-  return value1 - value2;
+	//this function is needed because otherwise sort orders by string value (result would be [1, 10, 2, 3])
+	return value1 - value2;
 });
 console.log(array);
 
@@ -94,18 +94,18 @@ console.log(Math.max(...numbers)); //Math is a built-in object in JS, the ... ex
 
 let form = document.getElementById("below_image");
 try {
-  console.log(form.childNodes);
+	console.log(form.childNodes);
 } catch (e) {
-  console.log("Only works on Home page - error: " + e.name);
+	console.log("Only works on Home page - error: " + e.name);
 }
 
 let inputs = document.querySelectorAll("input");
 console.log(inputs);
 
 const details = {
-  //JSON object
-  path: location.href,
-  dimensions: window.innerWidth + "x" + window.innerHeight, //dimensions of the window without toolbars etc.
+	//JSON object
+	path: location.href,
+	dimensions: window.innerWidth + "x" + window.innerHeight, //dimensions of the window without toolbars etc.
 };
 
 /*
@@ -113,6 +113,6 @@ let user = prompt("What is your name?");
 alert("Nice to meet you " + user + "!");
 
 if (confirm("Should I take you to wikipedia page about Helsinki?")) {
-  location.assign("https://en.wikipedia.org/wiki/Helsinki");
+	location.assign("https://en.wikipedia.org/wiki/Helsinki");
 }
 */

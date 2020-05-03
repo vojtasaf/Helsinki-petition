@@ -1,0 +1,87 @@
+<!--
+		Reference website
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>One Petition</title>
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="form.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Staatliches"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lora"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<nav>
+					<a href="index.html">Home</a>
+					<a href="form.html">Petition</a>
+				</nav>
+			</header>
+			<div class="content">
+				<h2>Add <span id="one">1</span> Signature</h2>
+				<p>Helsinki, Espoo and Vantaa should be united into a single city.</p>
+				<form>
+					<input
+						name="name"
+						id="name"
+						type="text"
+						placeholder="Name"
+						maxlength="35"
+					/><br />
+					<input
+						name="surname"
+						id="surname"
+						type="text"
+						placeholder="Surname"
+						maxlength="35"
+					/><br />
+					<input
+						name="email"
+						id="email"
+						placeholder="Email"
+						type="email"
+						maxlength="320"
+					/><br />
+					<div id="resident">
+						<label for="city">Resident of:</label>
+						<select name="city">
+							<option>Helsinki</option>
+							<option>Espoo</option>
+							<option>Vantaa</option> </select
+						><br />
+					</div>
+					<input
+						name="occupation"
+						id="occupation"
+						type="text"
+						placeholder="Occupation"
+						maxlength="50"
+					/><br />
+					<div id="signature">
+						<label for="public_signature">Show my signature publicly?</label>
+						<input
+							name="public_signature"
+							id="public_signature"
+							type="checkbox"
+							checked
+						/><br />
+					</div>
+
+					<input id="sign_button" type="submit" value="Sign the petition" />
+				</form>
+			</div>
+		</div>
+		<footer>
+			<hr />
+			<span id="copyright">Vojta Šafránek &copy; 2020</span>
+		</footer>
+		<script src="app.js"></script>
+	</body>
+</html>
